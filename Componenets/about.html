@@ -1,147 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- tailwind and daisy ui -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- tailwind and daisy ui -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
-  <script src="https://cdn.tailwindcss.com"></script>
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font awosme cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
-  <!-- google fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
-    rel="stylesheet" />
-  <!-- font awosme cdn -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- styles -->
+    <link rel="stylesheet" href="styles/style.css" />
 
-  <!-- styles -->
-  <link rel="stylesheet" href="styles/style.css" />
+    <!-- title -->
+    <title>About</title>
+  </head>
 
-  <!-- title -->
-  <title>About</title>
-
-</head>
-
-<body class="bg-white">
-  <header>
-    <nav class="md:w-[90%] flex items-center m-auto bg-[#41B3A2]">
-      <!-- nav logo -->
-      <div class="navlogo w-[10%] mx-5 font-black text-xl text-black">NA</div>
-      <!-- nav links -->
-      <div class="navlinks w-[80%] text-zinc-950 hidden md:block">
-        <ul class="flex justify-end text-white font-bold">
-          <li>
-            <a class="m-3 px-4 py-2 hover:bg-[#0D7C66] hover:text-white rounded duration-300" href="#">Home</a>
+  <body class="bg-white">
+    <header>
+      <nav class="md:w-[90%] flex items-center m-auto bg-[#41B3A2]">
+        <!-- nav logo -->
+        <div class="navlogo w-[10%] mx-5 font-black text-xl text-black">NA</div>
+        <!-- nav links -->
+        <div class="navlinks w-[80%] text-zinc-950 hidden md:block">
+          <ul class="flex justify-end text-white font-bold">
+            <li>
+              <a
+                class="m-3 px-4 py-2 hover:bg-[#0D7C66] hover:text-white rounded duration-300"
+                href="#"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                class="m-3 px-4 py-2 hover:bg-[#0D7C66] hover:text-white rounded duration-300"
+                href="#"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                class="m-3 px-4 py-2 hover:bg-[#0D7C66] hover:text-white rounded duration-300"
+                href="#"
+                >Plans</a
+              >
+            </li>
+            <li>
+              <a
+                class="m-3 px-4 py-2 hover:bg-[#0D7C66] hover:text-white rounded duration-300"
+                href="#"
+                >Gallery</a
+              >
+            </li>
+            <li>
+              <a
+                class="m-3 px-4 py-2 hover:bg-[#0D7C66] hover:text-white rounded duration-300"
+                href="#"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+        <!-- nav button  -->
+        <div class="navbutton w-[80%] md:w-[10%] flex justify-end mx-3">
+          <div
+            class="btn m-2 bg-[#0D7C66] hover:bg-[#16423C] text-white border-0"
+          >
+            <a href="#">Login</a>
+          </div>
+          <div
+            class="btn m-2 bg-[#0D7C66] hover:bg-[#16423C] text-white border-0 md:hidden"
+            onclick="showSidebar()"
+          >
+            <i class="fa-solid fa-bars"></i>
+          </div>
+        </div>
+      </nav>
+      <!-- menu links -->
+      <div class="menulinks w-[100%] text-zinc-950 md:hidden">
+        <ul
+          class="flex flex-col items-center rounded w-[90%] m-auto bg-[#6A9C89]"
+        >
+          <li
+            class="text-white w-[100%] text-center m-1 py-2 bg-[#0D7C66] rounded"
+            onclick="hideSidebar()"
+          >
+            <i class="fa-solid fa-xmark"></i>
           </li>
-          <li>
-            <a class="m-3 px-4 py-2 hover:bg-[#0D7C66] hover:text-white rounded duration-300" href="#">About</a>
+          <li
+            class="text-white w-[100%] text-center m-1 py-2 bg-[#0D7C66] rounded"
+          >
+            <a href="#">Home</a>
           </li>
-          <li>
-            <a class="m-3 px-4 py-2 hover:bg-[#0D7C66] hover:text-white rounded duration-300" href="#">Plans</a>
+          <li
+            class="text-white w-[100%] text-center m-1 py-2 bg-[#0D7C66] rounded"
+          >
+            <a href="#">About</a>
           </li>
-          <li>
-            <a class="m-3 px-4 py-2 hover:bg-[#0D7C66] hover:text-white rounded duration-300" href="#">Gallery</a>
+          <li
+            class="text-white w-[100%] text-center m-1 py-2 bg-[#0D7C66] rounded"
+          >
+            <a href="#">Plans</a>
           </li>
-          <li>
-            <a class="m-3 px-4 py-2 hover:bg-[#0D7C66] hover:text-white rounded duration-300" href="#">Contact</a>
+          <li
+            class="text-white w-[100%] text-center m-1 py-2 bg-[#0D7C66] rounded"
+          >
+            <a href="#">Gallery</a>
+          </li>
+          <li
+            class="text-white w-[100%] text-center m-1 py-2 bg-[#0D7C66] rounded"
+          >
+            <a href="#">Contact</a>
           </li>
         </ul>
       </div>
-      <!-- nav button  -->
-      <div class="navbutton w-[80%] md:w-[10%] flex justify-end mx-3">
-        <div class="btn m-2 bg-[#0D7C66] hover:bg-[#16423C] text-white border-0">
-          <a href="#">Login</a>
-        </div>
-        <div class="btn m-2 bg-[#0D7C66] hover:bg-[#16423C] text-white border-0 md:hidden" onclick="showSidebar()">
-          <i class="fa-solid fa-bars"></i>
-        </div>
+      <!-- banner  -->
+      <div
+        class="banner bg-[url('../photos/about_banner.jpg')] h-[200px] md:h-[250px] xl:h-[400px] w-[100%] md:w-[80%] m-auto bg-cover bg-center opacity-80 grid grid-col-1 place-content-center"
+      >
+        <p class="text-white text-lg md:text-2xl xl:text-4xl">About</p>
       </div>
-    </nav>
-    <!-- menu links -->
-    <div class="menulinks w-[100%] text-zinc-950 md:hidden">
-      <ul class="flex flex-col items-center rounded w-[90%] m-auto bg-[#6A9C89]">
-        <li class="text-white w-[100%] text-center m-1 py-2 bg-[#0D7C66] rounded" onclick="hideSidebar()">
-          <i class="fa-solid fa-xmark"></i>
-        </li>
-        <li class="text-white w-[100%] text-center m-1 py-2 bg-[#0D7C66] rounded">
-          <a href="#">Home</a>
-        </li>
-        <li class="text-white w-[100%] text-center m-1 py-2 bg-[#0D7C66] rounded">
-          <a href="#">About</a>
-        </li>
-        <li class="text-white w-[100%] text-center m-1 py-2 bg-[#0D7C66] rounded">
-          <a href="#">Plans</a>
-        </li>
-        <li class="text-white w-[100%] text-center m-1 py-2 bg-[#0D7C66] rounded">
-          <a href="#">Gallery</a>
-        </li>
-        <li class="text-white w-[100%] text-center m-1 py-2 bg-[#0D7C66] rounded">
-          <a href="#">Contact</a>
-        </li>
-      </ul>
-    </div>
-    <!-- banner  -->
+    </header>
+    <!-- About facilities  -->
     <div
-      class="banner bg-[url('../photos/about_banner.jpg')] h-[200px] md:h-[250px] xl:h-[400px] w-[100%] md:w-[80%] m-auto bg-cover bg-center opacity-80 grid grid-col-1 place-content-center">
-      <p class="text-white text-lg md:text-2xl xl:text-4xl">About</p>
-    </div>
-  </header>
-  <!-- About details  -->
-  <div class="grid grid-col-1 md:grid-cols-2 gap-4 mt-5 text-black p-5 lg:w-[1024px] m-auto">
-    <div class="">
-      <h1 class="text-xl font-bold text-[#0D7C66]">About NQ</h1>
-      <h1 class="text-2xl font-extrabold mb-5">
-        We provide our best tour facelities.
-      </h1>
-      <!-- grid component -->
-      <div class="grid grid-cols-2 gap-4 p-2">
-        <div class="flex items-center bg-[#E1F7F5] p-3 rounded">
-          <i class="fa-solid fa-suitcase-medical m-2 text-[#0D7C66]"></i>
-          <p>Safety First Always</p>
+      class="grid grid-col-1 md:grid-cols-2 gap-4 mt-5 text-black p-5 lg:w-[1024px] m-auto"
+    >
+      <div class="">
+        <h1 class="text-xl font-bold text-[#0D7C66]">About NQ</h1>
+        <h1 class="text-2xl font-extrabold mb-5">
+          We provide our best tour facelities.
+        </h1>
+        <!-- grid component for facilities -->
+        <div class="grid grid-cols-2 gap-4 p-2 text-xs md:text-sm">
+          <div class="flex items-center bg-[#E1F7F5] p-3 rounded">
+            <i class="fa-solid fa-suitcase-medical m-2 text-[#0D7C66]"></i>
+            <p class="">Safety First Always</p>
+          </div>
+          <div class="flex items-center bg-[#FFF8E8] p-3 rounded">
+            <i class="fa-solid fa-user m-2 text-[#0D7C66]"></i>
+            <p>Trusted Travel Guide</p>
+          </div>
+          <div class="flex items-center bg-[#FFF8E8] p-3 rounded">
+            <i class="fa-solid fa-explosion m-2 text-[#0D7C66]"></i>
+            <p>Experties And Experience</p>
+          </div>
+          <div class="flex items-center bg-[#E1F7F5] p-3 rounded">
+            <i class="fa-solid fa-business-time m-2 text-[#0D7C66]"></i>
+            <p>Time and Stress Saving</p>
+          </div>
         </div>
-        <div class="flex items-center bg-[#FFF8E8] p-3 rounded">
-          <i class="fa-solid fa-user m-2 text-[#0D7C66]"></i>
-          <p>Trusted Travel Guide</p>
-        </div>
-        <div class="flex items-center bg-[#FFF8E8] p-3 rounded">
-          <i class="fa-solid fa-explosion m-2 text-[#0D7C66]"></i>
-          <p>Experties And Experience</p>
-        </div>
-        <div class="flex items-center bg-[#E1F7F5] p-3 rounded">
-          <i class="fa-solid fa-business-time m-2 text-[#0D7C66]"></i>
-          <p>Time and Stress Saving</p>
-        </div>
+        <!-- button for about facilities  -->
+        <button
+          class="bg-[#0D7C66] py-3 px-5 rounded-full text-white font-bold mt-10 text-xs md:text-sm"
+        >
+          Find out more
+        </button>
+        <button class=" py-3 px-5 rounded-full font-bold mt-10 text-xs md:text-sm border border-[#0D7C66] ml-5">
+          <i class="fa-regular fa-circle-play text-[#0D7C66] mr-2 "></i
+          >Watch Tour
+        </button>
+        <p class="text-xl font-bold text-[#6A9C89] mt-4 mb-10 text-center">
+          5 Years of Experience
+        </p>
       </div>
-      <button class="bg-[#0D7C66] py-3 px-5 rounded-full text-white font-bold mt-10 text-sm">
-        Find out more
-      </button>
-      <button class="ml-10 font-bold text-sm">
-        <i class="fa-regular fa-circle-play text-[#0D7C66] text-3xl m-2"></i>Watch Tour
-      </button>
-      <p class="text-xl font-bold text-[#6A9C89] mt-4 mb-10 text-center">5 Years of Experience</p>
+      <!-- about facilities image -->
+      <div
+        class="bg-[url('../photos/about_facelities.jpg')] w-[80%] md:w-[100%] md:h-[600px] h-[500px] bg-cover bg-center rounded m-auto"
+      ></div>
     </div>
-    <!-- about facilities image -->
-    <div
-      class="bg-[url('../photos/about_facelities.jpg')] w-[80%] md:w-[100%] md:h-[600px] h-[500px] bg-cover bg-center rounded m-auto">
-    </div>
-  </div>
-
-  <script>
-    function showSidebar() {
-      const menulinks = document.querySelector(".menulinks");
-      menulinks.style.display = "block";
-    }
-    function hideSidebar() {
-      const menulinks = document.querySelector(".menulinks");
-      menulinks.style.display = "none";
-    }
-  </script>
-</body>
-
+    <!-- script  -->
+    <script>
+      function showSidebar() {
+        const menulinks = document.querySelector(".menulinks");
+        menulinks.style.display = "block";
+      }
+      function hideSidebar() {
+        const menulinks = document.querySelector(".menulinks");
+        menulinks.style.display = "none";
+      }
+    </script>
+  </body>
 </html>
